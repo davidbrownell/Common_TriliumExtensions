@@ -1,0 +1,110 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.enable_dev_polling" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_dev_polling_Item"
+    }, 
+    "_ExtensionData.enable_dev_polling_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Configures the frontend browser window to check for signaled changes and refresh if any are found."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.enable_dev_server" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_dev_server_Item"
+    }, 
+    "_ExtensionData.enable_dev_server_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Configures the Trilium backend to listen for refresh notifications at the specified url and port."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.enable_note_updates" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_note_updates_Item"
+    }, 
+    "_ExtensionData.enable_note_updates_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Update the development note with the body of http requests sent when signaling changes."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.polling_milliseconds" : {
+      "$ref" : "#/definitions/_ExtensionData.polling_milliseconds_Item"
+    }, 
+    "_ExtensionData.polling_milliseconds_Item" : {
+      "format" : "number", 
+      "minimum" : 1, 
+      "options" : {
+        "infoText" : "The frequency in which the backend is polled for changes."
+      }, 
+      "type" : "integer"
+    }, 
+    "_ExtensionData.port" : {
+      "$ref" : "#/definitions/_ExtensionData.port_Item"
+    }, 
+    "_ExtensionData.port_Item" : {
+      "format" : "number", 
+      "minimum" : 1, 
+      "options" : {
+        "infoText" : "The backend port used to signal and poll for changes."
+      }, 
+      "type" : "integer"
+    }, 
+    "_ExtensionData.url" : {
+      "$ref" : "#/definitions/_ExtensionData.url_Item"
+    }, 
+    "_ExtensionData.url_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The backend url used to signal and poll for changes."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "enable_dev_polling" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_dev_polling", 
+          "propertyOrder" : 1
+        }, 
+        "enable_dev_server" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_dev_server", 
+          "propertyOrder" : 0
+        }, 
+        "enable_note_updates" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_note_updates", 
+          "propertyOrder" : 5
+        }, 
+        "polling_milliseconds" : {
+          "$ref" : "#/definitions/_ExtensionData.polling_milliseconds", 
+          "propertyOrder" : 4
+        }, 
+        "port" : {
+          "$ref" : "#/definitions/_ExtensionData.port", 
+          "propertyOrder" : 3
+        }, 
+        "url" : {
+          "$ref" : "#/definitions/_ExtensionData.url", 
+          "propertyOrder" : 2
+        }
+      }, 
+      "required" : [
+        "enable_dev_polling", 
+        "enable_dev_server", 
+        "enable_note_updates", 
+        "polling_milliseconds", 
+        "port", 
+        "url"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}

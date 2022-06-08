@@ -23,3 +23,6 @@ coverage.xml
 
 .vscode/*
 .pytest_cache/*
+
+GeneratedCode/Compiler.ConditionalInvocationQueryMixin.data
+GeneratedCode/ConfigurationUx.schema.json
