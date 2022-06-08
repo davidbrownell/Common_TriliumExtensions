@@ -1,0 +1,93 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.date_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.date_attribute_name_Item"
+    }, 
+    "_ExtensionData.date_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The name of the Trilium attribute used to identify day notes within the Journal."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.enable_periodic_cleanup" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_periodic_cleanup_Item"
+    }, 
+    "_ExtensionData.enable_periodic_cleanup_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Periodically journal notes that do not have any children."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.month_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.month_attribute_name_Item"
+    }, 
+    "_ExtensionData.month_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The name of the Trilium attribute used to identify month notes within the Journal."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.permanent_tag_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name_Item"
+    }, 
+    "_ExtensionData.permanent_tag_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The name of a Trilium attribute that can be applied to a note to prevent it from being deleted."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.year_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.year_attribute_name_Item"
+    }, 
+    "_ExtensionData.year_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The name of the Trilium attribute used to identify year notes within the Journal."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "date_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.date_attribute_name", 
+          "propertyOrder" : 0
+        }, 
+        "enable_periodic_cleanup" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_periodic_cleanup", 
+          "propertyOrder" : 4
+        }, 
+        "month_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.month_attribute_name", 
+          "propertyOrder" : 1
+        }, 
+        "permanent_tag_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name", 
+          "propertyOrder" : 3
+        }, 
+        "year_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.year_attribute_name", 
+          "propertyOrder" : 2
+        }
+      }, 
+      "required" : [
+        "date_attribute_name", 
+        "enable_periodic_cleanup", 
+        "month_attribute_name", 
+        "permanent_tag_attribute_name", 
+        "year_attribute_name"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}

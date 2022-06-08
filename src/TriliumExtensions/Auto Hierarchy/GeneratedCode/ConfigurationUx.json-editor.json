@@ -1,0 +1,63 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.disable_validity_checks" : {
+      "$ref" : "#/definitions/_ExtensionData.disable_validity_checks_Item"
+    }, 
+    "_ExtensionData.disable_validity_checks_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Do not run validate checks to ensure that the Auto Hierarchy is in a consistent state."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.enable_periodic_cleanup" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_periodic_cleanup_Item"
+    }, 
+    "_ExtensionData.enable_periodic_cleanup_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Periodically clean up tags that do not have any children."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.permanent_tag_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name_Item"
+    }, 
+    "_ExtensionData.permanent_tag_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "The name of a Trilium attribute that can be applied to a note to prevent it from being deleted."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "disable_validity_checks" : {
+          "$ref" : "#/definitions/_ExtensionData.disable_validity_checks", 
+          "propertyOrder" : 2
+        }, 
+        "enable_periodic_cleanup" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_periodic_cleanup", 
+          "propertyOrder" : 1
+        }, 
+        "permanent_tag_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name", 
+          "propertyOrder" : 0
+        }
+      }, 
+      "required" : [
+        "disable_validity_checks", 
+        "enable_periodic_cleanup", 
+        "permanent_tag_attribute_name"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}
