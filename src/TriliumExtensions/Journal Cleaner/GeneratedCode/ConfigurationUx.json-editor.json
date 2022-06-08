@@ -21,7 +21,7 @@
     "_ExtensionData.enable_periodic_cleanup_Item" : {
       "format" : "checkbox", 
       "options" : {
-        "infoText" : "Periodically journal notes that do not have any children."
+        "infoText" : "Periodically remove journal notes that do not have any children."
       }, 
       "type" : "boolean"
     }, 

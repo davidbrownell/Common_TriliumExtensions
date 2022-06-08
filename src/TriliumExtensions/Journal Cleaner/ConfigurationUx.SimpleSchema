@@ -3,4 +3,4 @@
     <month_attribute_name string description="The name of the Trilium attribute used to identify month notes within the Journal.">
     <year_attribute_name string description="The name of the Trilium attribute used to identify year notes within the Journal.">
     <permanent_tag_attribute_name string description="The name of a Trilium attribute that can be applied to a note to prevent it from being deleted.">
-    <enable_periodic_cleanup bool description="Periodically journal notes that do not have any children.">
+    <enable_periodic_cleanup bool description="Periodically remove journal notes that do not have any children.">

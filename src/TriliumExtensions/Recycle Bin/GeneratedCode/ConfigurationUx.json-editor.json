@@ -1,0 +1,79 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.default_purge_days" : {
+      "$ref" : "#/definitions/_ExtensionData.default_purge_days_Item"
+    }, 
+    "_ExtensionData.default_purge_days_Item" : {
+      "format" : "number", 
+      "minimum" : 1, 
+      "options" : {
+        "infoText" : "The default number of days a note will live in the Recycle Bin before it is purged (deleted)."
+      }, 
+      "type" : "integer"
+    }, 
+    "_ExtensionData.disable_validity_checks" : {
+      "$ref" : "#/definitions/_ExtensionData.disable_validity_checks_Item"
+    }, 
+    "_ExtensionData.disable_validity_checks_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Do not run validate checks to ensure that the Recycle Bin is in a consistent state."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.enable_periodic_purge" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_periodic_purge_Item"
+    }, 
+    "_ExtensionData.enable_periodic_purge_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Periodically purge notes within the recycle bin that are scheduled to be purged (deleted)."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.metadata_note_name" : {
+      "$ref" : "#/definitions/_ExtensionData.metadata_note_name_Item"
+    }, 
+    "_ExtensionData.metadata_note_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Name of the note created as a child of recycled notes; this note contains metadata about the recycled note."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "default_purge_days" : {
+          "$ref" : "#/definitions/_ExtensionData.default_purge_days", 
+          "propertyOrder" : 1
+        }, 
+        "disable_validity_checks" : {
+          "$ref" : "#/definitions/_ExtensionData.disable_validity_checks", 
+          "propertyOrder" : 0
+        }, 
+        "enable_periodic_purge" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_periodic_purge", 
+          "propertyOrder" : 3
+        }, 
+        "metadata_note_name" : {
+          "$ref" : "#/definitions/_ExtensionData.metadata_note_name", 
+          "propertyOrder" : 2
+        }
+      }, 
+      "required" : [
+        "default_purge_days", 
+        "disable_validity_checks", 
+        "enable_periodic_purge", 
+        "metadata_note_name"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}
