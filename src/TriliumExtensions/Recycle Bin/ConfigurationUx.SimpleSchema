@@ -1,0 +1,5 @@
+<ExtensionData>:
+    <disable_validity_checks bool description="Do not run validate checks to ensure that the Recycle Bin is in a consistent state.">
+    <default_purge_days int min=1 description="The default number of days a note will live in the Recycle Bin before it is purged (deleted).">
+    <metadata_note_name string description="Name of the note created as a child of recycled notes; this note contains metadata about the recycled note.">
+    <enable_periodic_purge bool description="Periodically purge notes within the recycle bin that are scheduled to be purged (deleted).">

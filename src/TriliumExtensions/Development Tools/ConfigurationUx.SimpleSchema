@@ -1,0 +1,7 @@
+<ExtensionData>:
+    <enable_dev_server bool description="Configures the Trilium backend to listen for refresh notifications at the specified url and port.">
+    <enable_dev_polling bool description="Configures the frontend browser window to check for signaled changes and refresh if any are found.">
+    <url string description="The backend url used to signal and poll for changes.">
+    <port int min=1 description="The backend port used to signal and poll for changes.">
+    <polling_milliseconds int min=1 description="The frequency in which the backend is polled for changes.">
+    <enable_note_updates bool description="Update the development note with the body of http requests sent when signaling changes.">
