@@ -1,0 +1,7 @@
+<ExtensionData>:
+    <disable_validity_checks bool description="Do not run validity checks to ensure that Todoer is in a consistent state.">
+    <enable_periodic_auto_completion bool description="Periodically complete configured todo notes where all todo items have been completed.">
+    <classify_as_todo_attribute_name string description="Trilium attribute to explicitly specify that a note is a todo note.">
+    <ignore_note_attribute_name string description="Trilium attribute to prevent the note from being included in Todoer lists.">
+    <auto_complete_attribute_name string description="Specifies the option to take when all todo items on the note have been completed; available values are 'archive' and 'recycle'.">
+    <todo_note_classification_percentage number min=0 max=1 description="TODO: Ratio of text associated with todo items and overall text.">
