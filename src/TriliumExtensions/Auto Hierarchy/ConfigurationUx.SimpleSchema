@@ -1,0 +1,4 @@
+<ExtensionData>:
+    <permanent_tag_attribute_name string description="The name of a Trilium attribute that can be applied to a note to prevent it from being deleted.">
+    <enable_periodic_cleanup bool description="Periodically clean up tags that do not have any children.">
+    <disable_validity_checks bool description="Do not run validate checks to ensure that the Auto Hierarchy is in a consistent state.">
