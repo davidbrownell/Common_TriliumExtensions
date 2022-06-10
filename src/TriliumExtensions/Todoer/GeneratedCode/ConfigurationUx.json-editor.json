@@ -1,0 +1,110 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.auto_complete_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.auto_complete_attribute_name_Item"
+    }, 
+    "_ExtensionData.auto_complete_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Specifies the option to take when all todo items on the note have been completed; available values are 'archive' and 'recycle'."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.classify_as_todo_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.classify_as_todo_attribute_name_Item"
+    }, 
+    "_ExtensionData.classify_as_todo_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Trilium attribute to explicitly specify that a note is a todo note."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.disable_validity_checks" : {
+      "$ref" : "#/definitions/_ExtensionData.disable_validity_checks_Item"
+    }, 
+    "_ExtensionData.disable_validity_checks_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Do not run validity checks to ensure that Todoer is in a consistent state."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.enable_periodic_auto_completion" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_periodic_auto_completion_Item"
+    }, 
+    "_ExtensionData.enable_periodic_auto_completion_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Periodically complete configured todo notes where all todo items have been completed."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.ignore_note_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.ignore_note_attribute_name_Item"
+    }, 
+    "_ExtensionData.ignore_note_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Trilium attribute to prevent the note from being included in Todoer lists."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.todo_note_classification_percentage" : {
+      "$ref" : "#/definitions/_ExtensionData.todo_note_classification_percentage_Item"
+    }, 
+    "_ExtensionData.todo_note_classification_percentage_Item" : {
+      "format" : "number", 
+      "maximum" : 1.0, 
+      "minimum" : 0.0, 
+      "options" : {
+        "infoText" : "TODO: Ratio of text associated with todo items and overall text."
+      }, 
+      "type" : "number"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "auto_complete_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.auto_complete_attribute_name", 
+          "propertyOrder" : 4
+        }, 
+        "classify_as_todo_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.classify_as_todo_attribute_name", 
+          "propertyOrder" : 2
+        }, 
+        "disable_validity_checks" : {
+          "$ref" : "#/definitions/_ExtensionData.disable_validity_checks", 
+          "propertyOrder" : 0
+        }, 
+        "enable_periodic_auto_completion" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_periodic_auto_completion", 
+          "propertyOrder" : 1
+        }, 
+        "ignore_note_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.ignore_note_attribute_name", 
+          "propertyOrder" : 3
+        }, 
+        "todo_note_classification_percentage" : {
+          "$ref" : "#/definitions/_ExtensionData.todo_note_classification_percentage", 
+          "propertyOrder" : 5
+        }
+      }, 
+      "required" : [
+        "auto_complete_attribute_name", 
+        "classify_as_todo_attribute_name", 
+        "disable_validity_checks", 
+        "enable_periodic_auto_completion", 
+        "ignore_note_attribute_name", 
+        "todo_note_classification_percentage"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}

@@ -1,0 +1,4 @@
+<ExtensionData>:
+    <auto_archive_attribute_name string description="Trilium attribute that indicates when the note should be archived.">
+    <prevent_auto_archive_attribute_name string description="Trilium attribute that indicates that the note should not be archived by Auto Archive, even if the attribute above is present.">
+    <enable_periodic_archive bool description="Periodically check for notes that should be automatically archived after a specified date.">

@@ -35,10 +35,10 @@
       }, 
       "type" : "string"
     }, 
-    "_ExtensionData.permanent_tag_attribute_name" : {
-      "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name_Item"
+    "_ExtensionData.permanent_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.permanent_attribute_name_Item"
     }, 
-    "_ExtensionData.permanent_tag_attribute_name_Item" : {
+    "_ExtensionData.permanent_attribute_name_Item" : {
       "minLength" : 1, 
       "options" : {
         "infoText" : "The name of a Trilium attribute that can be applied to a note to prevent it from being deleted."
@@ -70,8 +70,8 @@
           "$ref" : "#/definitions/_ExtensionData.month_attribute_name", 
           "propertyOrder" : 1
         }, 
-        "permanent_tag_attribute_name" : {
-          "$ref" : "#/definitions/_ExtensionData.permanent_tag_attribute_name", 
+        "permanent_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.permanent_attribute_name", 
           "propertyOrder" : 3
         }, 
         "year_attribute_name" : {
@@ -83,7 +83,7 @@
         "date_attribute_name", 
         "enable_periodic_cleanup", 
         "month_attribute_name", 
-        "permanent_tag_attribute_name", 
+        "permanent_attribute_name", 
         "year_attribute_name"
       ], 
       "type" : "object"
