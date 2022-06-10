@@ -1,0 +1,63 @@
+{
+  "$ref" : "#/definitions/_ExtensionData", 
+  "$schema" : "http://json-schema.org/draft-07/schema#", 
+  "definitions" : {
+    "_ExtensionData" : {
+      "$ref" : "#/definitions/_ExtensionData_Item"
+    }, 
+    "_ExtensionData.auto_recycle_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.auto_recycle_attribute_name_Item"
+    }, 
+    "_ExtensionData.auto_recycle_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Trilium attribute that indicates when the note should be recycled."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData.enable_periodic_recycle" : {
+      "$ref" : "#/definitions/_ExtensionData.enable_periodic_recycle_Item"
+    }, 
+    "_ExtensionData.enable_periodic_recycle_Item" : {
+      "format" : "checkbox", 
+      "options" : {
+        "infoText" : "Periodically check for notes that should be automatically recycled after a specified date."
+      }, 
+      "type" : "boolean"
+    }, 
+    "_ExtensionData.prevent_auto_recycle_attribute_name" : {
+      "$ref" : "#/definitions/_ExtensionData.prevent_auto_recycle_attribute_name_Item"
+    }, 
+    "_ExtensionData.prevent_auto_recycle_attribute_name_Item" : {
+      "minLength" : 1, 
+      "options" : {
+        "infoText" : "Trilium attribute that indicates that the note should not be recycled by Auto Recycle, even if the attribute above is present."
+      }, 
+      "type" : "string"
+    }, 
+    "_ExtensionData_Item" : {
+      "additionalProperties" : false, 
+      "properties" : {
+        "auto_recycle_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.auto_recycle_attribute_name", 
+          "propertyOrder" : 0
+        }, 
+        "enable_periodic_recycle" : {
+          "$ref" : "#/definitions/_ExtensionData.enable_periodic_recycle", 
+          "propertyOrder" : 2
+        }, 
+        "prevent_auto_recycle_attribute_name" : {
+          "$ref" : "#/definitions/_ExtensionData.prevent_auto_recycle_attribute_name", 
+          "propertyOrder" : 1
+        }
+      }, 
+      "required" : [
+        "auto_recycle_attribute_name", 
+        "enable_periodic_recycle", 
+        "prevent_auto_recycle_attribute_name"
+      ], 
+      "type" : "object"
+    }
+  }, 
+  "type" : "object"
+}
